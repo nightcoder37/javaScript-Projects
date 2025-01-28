@@ -6,15 +6,15 @@
         const feedback = document.querySelector('.feedback');
         const messageContent = document.querySelector('.message-content');
 
-        if (message.value === '') {
+        if (message.value === ' ') {
             feedback.classList.add('show');
             setTimeout(function () {
                 feedback.classList.remove('show');
-                // console.log('check');
             }, 4000);
         } else {
+            // console.log('check');
             messageContent.textContent = message.value;
-            message.value = '';
+            message.value = ' ';
         }
     });
 })();
